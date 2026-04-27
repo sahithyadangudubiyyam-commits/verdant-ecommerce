@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerRank Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="logo">
+                <span class="logo-box">H</span>
+            </div>
+            <div class="content">
+                <h1>Welcome to<br>HackerRank Community</h1>
+                <p>Home to 26 Million developers worldwide</p>
+                <a href="#" class="know-more">Know more</a>
+            </div>
+            <canvas id="globe-canvas"></canvas>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="login-wrapper">
+                <h2>Welcome back!<br>Login to your account</h2>
+                <p class="subtitle">It's nice to see you again. Ready to code?</p>
+
+                <form action="#">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your username or email" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" placeholder="Your password" required>
+                    </div>
+
+                    <button type="submit" class="login-btn">Log In</button>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" checked>
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                </form>
+
+                <div class="divider">
+                    <span>or</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="social-btn google-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="G"
+                            style="width: 18px; margin-right: 8px;">
+                        Continue with Google
+                    </button>
+
+                    <div class="social-row">
+                        <button class="social-btn">LinkedIn</button>
+                        <button class="social-btn">GitHub</button>
+                        <button class="social-btn">Facebook</button>
+                    </div>
+                </div>
+
+                <div class="signup-footer">
+                    <p>Don't have an account? <a href="#">Sign up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="globe.js"></script>
+</body>
+
+</html>
