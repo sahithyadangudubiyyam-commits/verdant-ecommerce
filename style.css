@@ -1,1 +1,279 @@
+/* Basic Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left Panel Styling */
+.left-panel {
+    width: 45%;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dot pattern effect */
+.left-panel::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(#333 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+#globe-canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+
+}
+
+.logo-box {
+    display: inline-block;
+    background-color: #2EC866;
+    color: white;
+    font-weight: 900;
+    font-size: 24px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.left-panel .content {
+    z-index: 2;
+}
+
+.left-panel h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.left-panel p {
+    font-size: 16px;
+    color: #a0a0a0;
+    margin-bottom: 20px;
+}
+
+.know-more {
+    color: #2EC866;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Right Panel Styling */
+.right-panel {
+    width: 55%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-wrapper h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Form Styles */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2EC866;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2EC866;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #25a052;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    accent-color: #000;
+}
+
+.forgot-link {
+    color: #0077b5;
+    text-decoration: none;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.divider span {
+    background-color: #fff;
+    padding: 0 10px;
+    color: #888;
+    position: relative;
+    font-size: 12px;
+}
+
+/* Social Buttons */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.social-btn:hover {
+    background-color: #f9f9f9;
+}
+
+.social-row {
+    display: flex;
+    gap: 10px;
+}
+
+.social-row .social-btn {
+    flex: 1;
+}
+
+.signup-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-footer a {
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 40px 20px;
+    }
+}
